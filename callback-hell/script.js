@@ -1,4 +1,5 @@
-const url = "https://rickandmortyapi.com/api/character";
+const RICK_AND_MORTY_CHARACTERS = "https://rickandmortyapi.com/api/character";
+
 const btn = document.getElementById('get-data');
 const humansList = document.getElementById('humans-list');
 const image = document.createElement("img");
@@ -49,7 +50,7 @@ const showCharacters = (data, callback) => {
 };
 
 const callBackHellExample = () => {
-  fetchData(url, (firstStepData) => {
+  fetchData(RICK_AND_MORTY_CHARACTERS, (firstStepData) => {
     getAliveCharacters(firstStepData, (dataFromSecondStep) => {
       getAliveHumanCharacter(dataFromSecondStep, (dataFromThirdStep) => {
         showCharacters(dataFromThirdStep, (status) => {
